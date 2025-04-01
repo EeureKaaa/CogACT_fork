@@ -19,10 +19,10 @@ logger = logging.getLogger(__name__)
 def load_model():
     logger.info("Loading CogACT inference model...")
     model = CogACTInference(
-        saved_model_path='/home/wangxianhao/data/project/reasoning/CogACT/logdir/checkpoint_dir/cogact_libero_finetune_v1--image_aug/checkpoints/step-019000-epoch-23-loss=0.0111.pt',  # choose from [CogACT-Small, CogACT-Base, CogACT-Large] or the local path
+        saved_model_path='/home/wangxianhao/data/project/reasoning/CogACT/logdir/checkpoint_dir/cogact_libero_finetune_v1--image_aug/checkpoints/step-057000-epoch-71-loss=0.0083.pt',  # choose from [CogACT-Small, CogACT-Base, CogACT-Large] or the local path
         action_model_type='DiT-B',              # choose from ['DiT-S', 'DiT-B', 'DiT-L'] to match the model weight
         future_action_window_size=15,
-        unnorm_key='libero_10_no_noops',      # input your unnorm_key of the dataset
+        unnorm_key='custom_finetuning',      # input your unnorm_key of the dataset
         cfg_scale=3,                            # cfg from 1.5 to 7 also performs well
         use_ddim=True,                          # use DDIM sampling
         num_ddim_steps=10,                      # number of steps for DDIM sampling
