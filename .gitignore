@@ -147,3 +147,10 @@ dmypy.json
 # Caches and Datasets
 cache/
 data/
+
+# Logs for checkpoints
+logdir/
+
+# custom_finetuning
+.custom_finetuning/
+.custom_finetuning
